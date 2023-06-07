@@ -2,3 +2,27 @@
 html {
   font-family: "Poppins";
 }
+section {
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+.separator {
+  border: none;
+  height: 2px;
+  background: #82c2db;
+  width: 10%;
+  margin: 1.2rem auto 2.5rem auto;
+}
+strong {
+  font-weight: 600;
+}

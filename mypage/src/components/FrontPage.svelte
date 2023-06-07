@@ -2,7 +2,7 @@
   <div id="home">
     <div id="catching">
       <h1>Bonjour, je suis Ronan Kerveno</h1>
-      <p id="catchphrase">Développeur Web Javascript FullStack</p>
+      <p id="catchphrase">Développeur Web Javascript Frontend</p>
     </div>
     <picture id="home__picture">
       <source media="(max-width: 600px)" srcset="img/image_accueil_small.jpg" />
@@ -27,7 +27,7 @@
   </div>
   <div id="portfolio-section">
     <a href="#portfolio">
-      <button>Voir mon portfolio</button>
+      <button>Mes projets</button>
     </a>
   </div>
 </div>
