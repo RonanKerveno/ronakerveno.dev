@@ -63,11 +63,17 @@
 </section>
 
 <style>
+  section {
+    background-color: #f8f8f8;
+  }
   p {
     margin-bottom: 1.2rem;
   }
   .aboutme-subsection {
     margin-bottom: 3rem;
+  }
+  .aboutme-subsection:last-child {
+    margin-bottom: 0;
   }
   #aboutme-buttons {
     display: flex;

@@ -14,9 +14,7 @@
         En cours. Projet de fin de formation O'Clock. Vise à mettre en relation
         des particuliers autour d'un projet sportif.
       </p>
-      <p>
-        Next.js, Tailwind, Express, Sequelize, PostgreSQL
-      </p>
+      <p>Next.js, Tailwind, Express, Sequelize, PostgreSQL</p>
       <div class="project-btn">
         <a href="https://dev2.keronn.net/">
           <button>Site web</button>
@@ -34,11 +32,10 @@
       />
       <h3>Mon blog</h3>
       <p>
-        Mon carnet de notes partageant mon apprentissage du développement et des astuces autour de Linux.
+        Mon carnet de notes partageant mon apprentissage du développement et des
+        astuces autour de Linux.
       </p>
-      <p>
-        React, Tailwind, Directus
-      </p>
+      <p>React, Tailwind, Directus</p>
       <div class="project-btn">
         <a href="https://blog.ronankerveno.dev/">
           <button>Site web</button>
@@ -56,12 +53,8 @@
         class="project-pic"
       />
       <h3>D Saint Romain</h3>
-      <p>
-        Site vitrine d'un artiste plasticien.
-      </p>
-      <p>
-        Wordpress
-      </p>
+      <p>Site vitrine d'un artiste plasticien.</p>
+      <p>Wordpress</p>
       <div class="project-btn">
         <a href="https://dstromain.fr/">
           <button>Site web</button>
@@ -76,12 +69,8 @@
         class="project-pic"
       />
       <h3>Les Pitchoun's</h3>
-      <p>
-        Site web d'une crêche parentale.
-      </p>
-      <p>
-        Wordpress
-      </p>
+      <p>Site web d'une crêche parentale.</p>
+      <p>Wordpress</p>
       <div class="project-btn">
         <a href="https://crechelespitchouns.fr/">
           <button>Site web</button>
@@ -94,9 +83,13 @@
 <style>
   section {
     text-align: center;
+    background-color: azure;
   }
   .project-card {
     margin-bottom: 4rem;
+  }
+  .project-card:last-child {
+    margin-bottom: 0;
   }
   img {
     margin-bottom: 1.2rem;

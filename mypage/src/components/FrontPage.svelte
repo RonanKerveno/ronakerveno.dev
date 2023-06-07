@@ -1,4 +1,21 @@
-<div id="frontpage">
+<script>
+  import { onMount } from 'svelte';
+
+  let frontPageHeight = '100vh';
+
+  onMount(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        frontPageHeight = 'auto';
+      } else {
+        frontPageHeight = '100vh';
+      }
+    });
+  });
+</script>
+
+
+<div id="frontpage" style="height: {frontPageHeight};">
   <div id="home">
     <div id="catching">
       <h1>Bonjour, je suis Ronan Kerveno</h1>
@@ -25,7 +42,7 @@
       <img class="home__image" src="img/image_accueil.jpg" alt="Web devices" />
     </picture>
   </div>
-  <div id="portfolio-section">
+  <div id="portfolio-link">
     <a href="#portfolio">
       <button>Mes projets</button>
     </a>
@@ -34,31 +51,31 @@
 
 <style>
   #frontpage {
-    height: 100vh;
+    margin-bottom: 4rem;
   }
   #home {
     background-color: #82c2db;
-    padding-top: 4rem;
+    padding-top: 8vh;
     color: #333333;
   }
   #catching {
-    margin: 2rem 1rem;
+    margin: 5vh 1rem;
   }
   h1 {
     font-size: 1.7rem;
-    font-weight: 400;
+    font-weight: 500;
   }
   #catchphrase {
-    margin-top: 1rem;
+    margin-top: 2vh;
   }
   #home__picture {
     background-color: white;
   }
   .home__image {
-    margin-bottom: -0.5rem;
+    margin-bottom: -0.7rem;
   }
-  #portfolio-section {
-    margin-top: 4rem;
+  #portfolio-link {
+    margin-top: 10vh;
     text-align: center;
   }
   button {
