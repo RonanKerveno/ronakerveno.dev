@@ -1,4 +1,4 @@
-<section>
+<section id="Projets">
   <h2>Projets</h2>
   <hr class="separator" />
 

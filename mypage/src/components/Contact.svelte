@@ -1,34 +1,70 @@
 <script>
+  import { tick } from "svelte";
   /**
    * @type {string | undefined}
    */
   export let mailApiKey;
   let status = "";
+  let isSubmitting = false;
+
+  let name = "";
+  let email = "";
+  let message = "";
+
+  async function handleDelay() {
+    await tick();
+    setTimeout(() => {
+      status = "";
+    }, 7000);
+  }
+
   const handleSubmit = async (
-    /** @type {{ currentTarget: HTMLFormElement | undefined; }} */ data
+    /** @type {{ preventDefault: () => void; }} */ event
   ) => {
-    status = "Submitting...";
-    const formData = new FormData(data.currentTarget);
-    const object = Object.fromEntries(formData);
+    event.preventDefault();
+    isSubmitting = true;
+
+    const object = {
+      access_key: mailApiKey,
+      name: name,
+      email: email,
+      message: message,
+    };
     const json = JSON.stringify(object);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    });
-    const result = await response.json();
-    if (result.success) {
-      console.log(result);
-      status = result.message || "Success";
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      });
+      const result = await response.json();
+      status = result.success
+        ? "L'Email a bien été envoyé !"
+        : "Erreur: " + result.message;
+      if (result.success) {
+        name = "";
+        email = "";
+        message = "";
+      }
+    } catch (error) {
+      if (error instanceof Error) {
+        status = "Error: " + error.message;
+      } else {
+        status = "Error: " + JSON.stringify(error);
+      }
+    } finally {
+      isSubmitting = false;
     }
+
+    handleDelay();
   };
 </script>
 
-<section>
+<section id="Contact">
   <h2>Contact</h2>
   <hr class="separator" />
   <p>
@@ -36,11 +72,18 @@
     répondrais dès que possible.
   </p>
   <form on:submit|preventDefault={handleSubmit}>
-    <input type="hidden" name="access_key" value={mailApiKey} />
-    <input type="text" name="name" required />
-    <input type="email" name="email" required />
-    <textarea name="message" required rows="3" />
-    <input type="submit" />
+    <input type="text" bind:value={name} placeholder="Nom" required />
+    <input type="email" bind:value={email} placeholder="Email" required />
+    <textarea bind:value={message} placeholder="Message" required rows="3" />
+    <input
+      type="submit"
+      disabled={isSubmitting}
+      class:success={!isSubmitting && status.startsWith("Success")}
+      class:error={status.startsWith("Error")}
+    />
+    {#if status}
+      <p class="status">{status}</p>
+    {/if}
   </form>
 </section>
 
@@ -48,13 +91,15 @@
   section {
     background-color: #fafafa;
   }
-  p {
+  p,
+  .status {
     text-align: center;
+    margin-bottom: 2.5rem;
   }
   form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1.2rem;
     width: 300px;
     margin: 0 auto;
   }
@@ -67,11 +112,14 @@
   }
   input[type="submit"] {
     cursor: pointer;
-    background-color: #4caf50;
-    color: white;
+    background-color: #82c2db;
     border: none;
   }
   input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #68a5c4;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color:lightslategray
   }
 </style>

@@ -1,21 +1,26 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
+  import { frontPageHeight } from "../stores/store";
 
-  let frontPageHeight = '100vh';
+  let pageHeight = "100vh";
+
+  const unsubscribe = frontPageHeight.subscribe(value => {
+        pageHeight = value;
+    });
 
   onMount(() => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
-        frontPageHeight = 'auto';
+        frontPageHeight.set("auto");
       } else {
-        frontPageHeight = '100vh';
+        frontPageHeight.set("100vh");
       }
     });
+    return unsubscribe;
   });
 </script>
 
-
-<div id="frontpage" style="height: {frontPageHeight};">
+<div id="Accueil" style="height: {pageHeight};">
   <div id="home">
     <div id="catching">
       <h1>Bonjour, je suis Ronan Kerveno</h1>
@@ -50,7 +55,7 @@
 </div>
 
 <style>
-  #frontpage {
+  #Accueil {
     margin-bottom: 4rem;
   }
   #home {

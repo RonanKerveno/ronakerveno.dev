@@ -19,7 +19,7 @@
   ];
 </script>
 
-<section>
+<section id="A propos">
   <h2>A propos de moi</h2>
   <hr class="separator" />
   <div class="aboutme-subsection">
@@ -64,7 +64,7 @@
 
 <style>
   section {
-    background-color: #f8f8f8;
+    background-color: #f1f1f1;
   }
   p {
     margin-bottom: 1.2rem;

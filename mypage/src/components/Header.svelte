@@ -1,5 +1,6 @@
 <script>
   import { Hamburger } from "svelte-hamburgers";
+  import Menu from "./Menu.svelte";
 
   /**
    * @type {boolean}
@@ -12,17 +13,26 @@
     <img src="img/ronan_kerveno.svg" alt="download icon" id="header-image" />
     <p>Ronan Kerveno</p>
   </div>
-  <Hamburger bind:open --color="white" --layer-height="3px"/>
+  <div id="burger-container">
+    <Hamburger
+      bind:open
+      --color="white"
+      --layer-height="2px"
+      --layer-width="27px"
+      --hover-opacity="1"
+    />
+  </div>
 </header>
+<Menu bind:open />
 
 <style>
   header {
+    padding-top: 0.1rem;
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: rgba(0, 0, 0, 0.664);
     color: white;
   }
@@ -34,5 +44,10 @@
   }
   #header-image {
     height: 2.7rem;
+    margin-left: 0.5rem;
   }
+  #burger-container {
+    margin-top: 0.3rem;
+  }
+
 </style>
