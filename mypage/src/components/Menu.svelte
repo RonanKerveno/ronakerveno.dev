@@ -43,6 +43,7 @@
         padding-top: 0;
         color: #eef;
         background-color: rgba(0, 0, 0, 0.664);
+        z-index: 1;
     }
     p {
         cursor: pointer;
