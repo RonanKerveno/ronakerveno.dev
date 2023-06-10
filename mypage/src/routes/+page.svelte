@@ -4,6 +4,7 @@
 	import AboutMe from "../components/AboutMe.svelte";
 	import Projects from "../components/Projects.svelte";
 	import Contact from "../components/Contact.svelte";
+	import Footer from "../components/Footer.svelte";
 	/** @type {import('../routes/$types').PageData} */
 	export let data;
 </script>
@@ -16,3 +17,5 @@
 	<Projects />
 	<Contact mailApiKey={data.mailApiKey}/>
 </main>
+
+<Footer />

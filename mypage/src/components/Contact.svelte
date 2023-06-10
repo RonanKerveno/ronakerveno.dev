@@ -114,6 +114,7 @@
     cursor: pointer;
     background-color: #82c2db;
     border: none;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
   input[type="submit"]:hover {
     background-color: #68a5c4;

@@ -30,8 +30,8 @@
       (AutoHotkey, VBA) qui m'ont donné le goût du code.
     </p>
     <p>
-      Toujours en veille technologique, je me suis autoformé en
-      html/CSS/JavaScript puis en 2022/2023 j'ai intégré la formation <strong
+      Après m'être autoformé en
+      HTML, CSS et JavaScript j'ai intégré en 2022 la formation <strong
         >Fullstack JavaScript</strong
       >
       de l'école <strong>O'Clock</strong>, avec une spécialisation en
@@ -44,10 +44,10 @@
       > documentant mes découvertes et apprentissages de développeur et linuxien.
     </p>
     <div id="aboutme-buttons">
-      <a href="#contact">
+      <a href="https://blog.ronankerveno.dev/">
         <button>Mon blog</button>
       </a>
-      <a href="#contact">
+      <a href="doc/Ronan_Kerveno_CV.pdf">
         <button>Mon CV</button>
       </a>
     </div>
@@ -68,16 +68,18 @@
   }
   p {
     margin-bottom: 1.2rem;
+    font-size: 0.95rem;
   }
   .aboutme-subsection {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .aboutme-subsection:last-child {
     margin-bottom: 0;
   }
   #aboutme-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
     margin-top: 2.5rem;
   }
   button {
@@ -94,12 +96,14 @@
     background-color: #68a5c4;
   }
   .skills-container {
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
   }
   .skill-tag {
     padding: 0.5rem 1rem;
+    color: #4e4e4e;
     background-color: rgba(153,153,153,.2);
     border-radius: 5px;
     font-size: 0.9rem;

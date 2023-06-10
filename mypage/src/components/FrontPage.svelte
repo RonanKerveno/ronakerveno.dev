@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { fly } from "svelte/transition";
-  import { frontPageHeight } from "../stores/store";
+  import { frontPageHeight } from "../stores/frontPage";
 
   let animate = false;
 
@@ -73,11 +73,20 @@
     </picture>
   </div>
   {#if animate}
-  <div id="portfolio-link">
-    <a href="#portfolio">
-      <button in:fly="{{ y: 200, duration: 4000 }}">Mes projets</button>
-    </a>
-  </div>
+    <div id="portfolio-link">
+      <a href="#Projets">
+        {#if window.scrollY <= 100}
+          <button
+            in:fly={{ y: 200, duration: 4000 }}
+            on:click={() => (pageHeight = "auto")}
+          >
+            Mes projets
+          </button>
+        {:else}
+          <button on:click={() => (pageHeight = "auto")}> Mes projets </button>
+        {/if}
+      </a>
+    </div>
   {/if}
 </div>
 
@@ -96,9 +105,11 @@
   h1 {
     font-size: 1.7rem;
     font-weight: 500;
+    text-transform: uppercase;
   }
   #catchphrase {
     margin-top: 2vh;
+    font-size: 1rem;
   }
   h1,
   p#catchphrase {
@@ -111,7 +122,7 @@
     margin-bottom: -0.7rem;
   }
   #portfolio-link {
-    margin-top: 10vh;
+    margin-top: 7vh;
     text-align: center;
   }
   button {

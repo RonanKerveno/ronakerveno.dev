@@ -11,10 +11,10 @@
       />
       <h3>O'Sport</h3>
       <p>
-        En cours. Projet de fin de formation O'Clock. Vise à mettre en relation
+        <strong>En cours.</strong> Projet de fin de formation O'Clock. Vise à mettre en relation
         des particuliers autour d'un projet sportif.
       </p>
-      <p>Next.js, Tailwind, Express, Sequelize, PostgreSQL</p>
+      <p class="project-technos">Next.js, Tailwind, Express, Sequelize, PostgreSQL</p>
       <div class="project-btn">
         <a href="https://dev2.keronn.net/">
           <button>Site web</button>
@@ -35,7 +35,7 @@
         Mon carnet de notes partageant mon apprentissage du développement et des
         astuces autour de Linux.
       </p>
-      <p>React, Tailwind, Directus</p>
+      <p class="project-technos">React, Tailwind, Directus</p>
       <div class="project-btn">
         <a href="https://blog.ronankerveno.dev/">
           <button>Site web</button>
@@ -54,7 +54,7 @@
       />
       <h3>D Saint Romain</h3>
       <p>Site vitrine d'un artiste plasticien.</p>
-      <p>Wordpress</p>
+      <p class="project-technos">Wordpress</p>
       <div class="project-btn">
         <a href="https://dstromain.fr/">
           <button>Site web</button>
@@ -70,7 +70,7 @@
       />
       <h3>Les Pitchoun's</h3>
       <p>Site web d'une crêche parentale.</p>
-      <p>Wordpress</p>
+      <p class="project-technos">Wordpress</p>
       <div class="project-btn">
         <a href="https://crechelespitchouns.fr/">
           <button>Site web</button>
@@ -86,7 +86,7 @@
     background-color: azure;
   }
   .project-card {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
   .project-card:last-child {
     margin-bottom: 0;
@@ -96,6 +96,10 @@
   }
   p {
     margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+  }
+  .project-technos {
+    font-weight: 600;
   }
   .project-btn {
     display: flex;

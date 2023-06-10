@@ -1,6 +1,8 @@
 <script>
+  import { isMobile, isTablet, isDesktop } from "../stores/breakpoints";
   import { Hamburger } from "svelte-hamburgers";
   import Menu from "./Menu.svelte";
+  import MenuDesktop from "./MenuDesktop.svelte";
 
   /**
    * @type {boolean}
@@ -10,18 +12,31 @@
 
 <header>
   <div id="header-title">
-    <img src="img/ronan_kerveno.svg" alt="download icon" id="header-image" />
+    <a href="/">
+      <img
+        src="img/ronan_kerveno.svg"
+        alt="Ronan Kerveno logo"
+        id="header-image"
+      />
+    </a>
     <p>Ronan Kerveno</p>
   </div>
-  <div id="burger-container">
-    <Hamburger
-      bind:open
-      --color="white"
-      --layer-height="2px"
-      --layer-width="27px"
-      --hover-opacity="1"
-    />
-  </div>
+  {#if $isDesktop}
+    <!-- Desktop version -->
+    <MenuDesktop />
+  {:else}
+    <!-- Mobile version -->
+    <div id="burger-container">
+      <Hamburger
+        bind:open
+        --color="white"
+        --layer-height="2px"
+        --layer-width="27px"
+        --hover-opacity="1"
+      />
+    </div>
+    <Menu bind:open />
+  {/if}
 </header>
 <Menu bind:open />
 
@@ -35,11 +50,16 @@
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.664);
     color: white;
+    z-index: 1;
   }
   #header-title {
     display: flex;
     font-size: larger;
     gap: 1rem;
+    align-items: center;
+  }
+  #header-title a {
+    display: flex;
     align-items: center;
   }
   #header-image {
@@ -49,5 +69,4 @@
   #burger-container {
     margin-top: 0.3rem;
   }
-
 </style>

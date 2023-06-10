@@ -1,5 +1,5 @@
 <script>
-    import { frontPageHeight } from '../stores/store';
+    import { frontPageHeight } from '../stores/frontPage';
     import { fly, scale, fade } from "svelte/transition";
     import { quadOut } from "svelte/easing";
 
@@ -49,9 +49,6 @@
         cursor: pointer;
         width: max-content;
         margin: 1rem auto;
-    }
-    p:hover {
-        text-decoration: underline;
     }
     .bar {
         border-style: solid;

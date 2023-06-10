@@ -11,6 +11,7 @@
 		"lint": "eslint ."
 	},
 	"devDependencies": {
+		"@iconify/svelte": "^3.1.4",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
@@ -27,6 +28,7 @@
 	"dependencies": {
 		"hamburger-menu-svelte": "^2.2.0",
 		"svelte-burger-menu": "^2.0.5",
-		"svelte-hamburgers": "^4.0.1"
+		"svelte-hamburgers": "^4.0.1",
+		"svelte-icons-pack": "^2.1.0"
 	}
 }
