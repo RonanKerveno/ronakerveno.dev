@@ -96,11 +96,11 @@
   }
   #home {
     background-color: #82c2db;
-    padding-top: 8vh;
+    padding-top: 4rem;
     color: #333333;
   }
   #catching {
-    margin: 5vh 1rem;
+    margin: 2.5rem 1rem;
   }
   h1 {
     font-size: 1.7rem;
@@ -108,7 +108,7 @@
     text-transform: uppercase;
   }
   #catchphrase {
-    margin-top: 2vh;
+    margin-top: 1.5rem;
     font-size: 1rem;
   }
   h1,
@@ -122,7 +122,7 @@
     margin-bottom: -0.7rem;
   }
   #portfolio-link {
-    margin-top: 7vh;
+    margin-top: 4rem;
     text-align: center;
   }
   button {

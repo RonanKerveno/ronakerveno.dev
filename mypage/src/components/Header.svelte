@@ -38,7 +38,6 @@
     <Menu bind:open />
   {/if}
 </header>
-<Menu bind:open />
 
 <style>
   header {
