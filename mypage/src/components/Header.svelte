@@ -2,26 +2,6 @@
   import { Hamburger } from "svelte-hamburgers";
   import Menu from "./Menu.svelte";
   import MenuDesktop from "./MenuDesktop.svelte";
-  import { writable, derived } from "svelte/store";
-
-  // Définition des breakpoints
-  const breakpoints = {
-    desktop: 800,
-  };
-
-  // Écouteur pour le redimensionnement de la fenêtre
-  const screenSize = writable([0, 0]);
-  if (typeof window !== "undefined") {
-    window.addEventListener("resize", () =>
-      screenSize.set([window.innerWidth, window.innerHeight])
-    );
-    screenSize.set([window.innerWidth, window.innerHeight]);
-  }
-
-  const isDesktop = derived(
-    screenSize,
-    ($screenSize) => $screenSize[0] >= breakpoints.desktop
-  );
 
   let open: boolean;
   let menuItems: string[] = ["Accueil", "A propos", "Projets", "Contact"];
@@ -39,11 +19,14 @@
       </a>
       <p>Ronan Kerveno</p>
     </div>
-    {#if $isDesktop}
-      <!-- Desktop version -->
+
+    <!-- Desktop version -->
+    <div class="desktop-menu">
       <MenuDesktop {menuItems} />
-    {:else}
-      <!-- Mobile version -->
+    </div>
+
+    <!-- Mobile version -->
+    <div class="mobile-menu">
       <div class="burger-container">
         <Hamburger
           bind:open
@@ -54,7 +37,7 @@
         />
       </div>
       <Menu {menuItems} bind:open />
-    {/if}
+    </div>
   </div>
 </header>
 
@@ -92,6 +75,14 @@
   .burger-container {
     margin-top: 0.3rem;
   }
+  
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
 
   @media (min-width: 800px) {
     .header-container {
@@ -100,6 +91,12 @@
     }
     .header-image {
       margin-left: 0rem;
+    }
+    .desktop-menu {
+      display: block;
+    }
+    .mobile-menu {
+      display: none;
     }
   }
 </style>
