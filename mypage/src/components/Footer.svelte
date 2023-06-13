@@ -6,9 +6,15 @@
 
 <footer>
   <div class="icon-container">
-    <Icon icon="ri:linkedin-fill" style={iconStyle} />
-    <Icon icon="teenyicons:github-solid" style={iconStyle} />
-    <Icon icon="fa6-solid:blog" style={iconStyle} />
+    <a href="https://www.linkedin.com/in/ronankerveno/">
+      <Icon icon="ri:linkedin-fill" style={iconStyle} />
+    </a>
+    <a href="https://github.com/RonanKerveno/">
+      <Icon icon="teenyicons:github-solid" style={iconStyle} />
+    </a>
+    <a href="https://blog.ronankerveno.dev/">
+      <Icon icon="fa6-solid:blog" style={iconStyle} />
+    </a>
   </div>
   <div class="techno">
     <Icon icon="simple-icons:svelte" style={iconStyle} />
