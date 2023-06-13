@@ -13,10 +13,8 @@
   <div class="techno">
     <Icon icon="simple-icons:svelte" style={iconStyle} />
     <p>
-      Propulsé par 
-      <a href="https://kit.svelte.dev/" class="techno-link">
-        SvelteKit
-      </a>
+      Propulsé par
+      <a href="https://kit.svelte.dev/" class="techno-link"> SvelteKit </a>
     </p>
   </div>
   <div class="footer__copyright">
@@ -49,5 +47,17 @@
   .techno-link {
     font-size: 1rem;
     text-decoration: underline;
+  }
+
+  @media (min-width: 1080px) {
+    footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .icon-container,
+    .techno {
+      margin-bottom: 0;
+    }
   }
 </style>

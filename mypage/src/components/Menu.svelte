@@ -1,22 +1,20 @@
-<script>
+<script lang=ts>
     import { frontPageHeight } from '../stores/frontPage';
     import { fly, scale, fade } from "svelte/transition";
     import { quadOut } from "svelte/easing";
 
-    /**
-     * @type {boolean}
-     */
-    export let open;
+    export let open: boolean
 
     function handleClick() {
         frontPageHeight.set('auto');
         open = false
     }
+     export let menuItems: string[];
 </script>
 
 {#if open}
     <div class="menu" out:fade={{ duration: 200 }}>
-        {#each ["Accueil", "A propos", "Projets", "Contact"] as link, i}
+        {#each menuItems as link, i}
         <a href={"#"+link} rel="external" on:click={handleClick}>
             <p transition:fly={{ y: -15, delay: 50 * i }}>
                 {link}
@@ -37,9 +35,9 @@
         left: 0;
         right: 0;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 2.2rem;
         letter-spacing: 0.15em;
-        padding: 1em;
+        padding: 1rem;
         padding-top: 0;
         color: #eef;
         background-color: rgba(0, 0, 0, 0.664);
@@ -48,7 +46,7 @@
     p {
         cursor: pointer;
         width: max-content;
-        margin: 1rem auto;
+        margin: 1.7rem auto;
     }
     .bar {
         border-style: solid;

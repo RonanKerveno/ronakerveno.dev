@@ -2,79 +2,98 @@
   <h2>Projets</h2>
   <hr class="separator" />
 
-  <div id="projects-view">
+  <div class="projects-view">
     <div class="project-card">
-      <img
-        src="img/project-osport.svg"
-        alt="download icon"
-        class="project-pic"
-      />
-      <h3>O'Sport</h3>
-      <p>
-        <strong>En cours.</strong> Projet de fin de formation O'Clock. Vise à mettre en relation
-        des particuliers autour d'un projet sportif.
-      </p>
-      <p class="project-technos">Next.js, Tailwind, Express, Sequelize, PostgreSQL</p>
-      <div class="project-btn">
-        <a href="https://dev2.keronn.net/">
-          <button>Site web</button>
-        </a>
-        <a href="https://github.com/O-clock-Quarks/O-Sport-Front">
-          <button>GitHub</button>
-        </a>
+      <div class="project-card-img">
+        <img
+          src="img/project-osport.svg"
+          alt="download icon"
+          class="project-pic"
+        />
       </div>
-    </div>
-    <div class="project-card">
-      <img
-        src="img/project-blog.ronankerveno.svg"
-        alt="download icon"
-        class="project-pic"
-      />
-      <h3>Mon blog</h3>
-      <p>
-        Mon carnet de notes partageant mon apprentissage du développement et des
-        astuces autour de Linux.
-      </p>
-      <p class="project-technos">React, Tailwind, Directus</p>
-      <div class="project-btn">
-        <a href="https://blog.ronankerveno.dev/">
-          <button>Site web</button>
-        </a>
-        <a href="https://github.com/RonanKerveno/blog.ronankerveno.dev">
-          <button>GitHub</button>
-        </a>
+      <div class="project-card-txt">
+        <h3>O'Sport</h3>
+        <p>
+          <strong>En cours.</strong> Projet de fin de formation O'Clock. Vise à mettre
+          en relation des particuliers autour d'un projet sportif.
+        </p>
+        <p class="project-technos">
+          Next.js, Tailwind, Express, Sequelize, PostgreSQL
+        </p>
+        <div class="project-btn">
+          <a href="https://dev2.keronn.net/">
+            <button>Site web</button>
+          </a>
+          <a href="https://github.com/O-clock-Quarks/O-Sport-Front">
+            <button>GitHub</button>
+          </a>
+        </div>
       </div>
     </div>
 
     <div class="project-card">
-      <img
-        src="img/project-dstromain.svg"
-        alt="download icon"
-        class="project-pic"
-      />
-      <h3>D Saint Romain</h3>
-      <p>Site vitrine d'un artiste plasticien.</p>
-      <p class="project-technos">Wordpress</p>
-      <div class="project-btn">
-        <a href="https://dstromain.fr/">
-          <button>Site web</button>
-        </a>
+      <div class="project-card-img">
+        <img
+          src="img/project-blog.ronankerveno.svg"
+          alt="download icon"
+          class="project-pic"
+        />
+      </div>
+      <div class="project-card-txt">
+        <h3>Mon blog</h3>
+        <p>
+          Mon carnet de notes partageant mon apprentissage du développement et
+          des astuces autour de Linux.
+        </p>
+        <p class="project-technos">React, Tailwind, Directus</p>
+        <div class="project-btn">
+          <a href="https://blog.ronankerveno.dev/">
+            <button>Site web</button>
+          </a>
+          <a href="https://github.com/RonanKerveno/blog.ronankerveno.dev">
+            <button>GitHub</button>
+          </a>
+        </div>
       </div>
     </div>
 
     <div class="project-card">
-      <img
-        src="img/project-crechelespitchouns.svg"
-        alt="download icon"
-        class="project-pic"
-      />
-      <h3>Les Pitchoun's</h3>
-      <p>Site web d'une crêche parentale.</p>
-      <p class="project-technos">Wordpress</p>
-      <div class="project-btn">
-        <a href="https://crechelespitchouns.fr/">
-          <button>Site web</button>
-        </a>
+      <div class="project-card-img">
+        <img
+          src="img/project-dstromain.svg"
+          alt="download icon"
+          class="project-pic"
+        />
+      </div>
+      <div class="project-card-txt">
+        <h3>D Saint Romain</h3>
+        <p>Site vitrine d'un artiste plasticien, réalisé avec Wordpress avant ma reconversion.</p>
+        <p class="project-technos">Wordpress</p>
+        <div class="project-btn">
+          <a href="https://dstromain.fr/">
+            <button>Site web</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-card-img">
+        <img
+          src="img/project-crechelespitchouns.svg"
+          alt="download icon"
+          class="project-pic"
+        />
+      </div>
+      <div class="project-card-txt">
+        <h3>Les Pitchoun's</h3>
+        <p>Site web d'une crêche parentale, réalisé avec Wordpress avant ma reconversion.</p>
+        <p class="project-technos">Wordpress</p>
+        <div class="project-btn">
+          <a href="https://crechelespitchouns.fr/">
+            <button>Site web</button>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -117,5 +136,40 @@
   }
   button:hover {
     background-color: #68a5c4;
+  }
+
+  @media (min-width: 800px) {
+    .projects-view {
+      width: 94%;
+      margin: auto;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .projects-view {
+      margin-top: 4rem;
+    }
+    .project-card {
+      display: flex;
+      justify-content: space-around;
+      gap: 4rem;
+      text-align: left;
+    }
+    .project-card-img {
+      width: 60%;
+    }
+    .project-card-txt {
+      width: 40%;
+      margin-top: 1rem;
+    }
+    .project-btn {
+      justify-content: left;
+    }
+  }
+
+  @media (min-width: 1350px) {
+    .projects-view {
+      width: 78rem;
+    }
   }
 </style>

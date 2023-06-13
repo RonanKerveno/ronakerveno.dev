@@ -28,8 +28,8 @@
 </script>
 
 <div id="Accueil" style="height: {pageHeight};">
-  <div id="home">
-    <div id="catching">
+  <div class="home">
+    <div class="catching">
       <h1>
         {#each title as letter, index (index)}
           <span
@@ -39,7 +39,7 @@
           >
         {/each}
       </h1>
-      <p id="catchphrase">
+      <p class="catchphrase">
         {#each subtitle as letter, index (index)}
           <span
             class={animate ? "letter animate" : "letter"}
@@ -51,7 +51,7 @@
       </p>
     </div>
 
-    <picture id="home__picture">
+    <picture class="home__picture">
       <source media="(max-width: 600px)" srcset="img/image_accueil_small.jpg" />
       <source
         media="(min-width: 601px) and (max-width: 767px)"
@@ -73,7 +73,7 @@
     </picture>
   </div>
   {#if animate}
-    <div id="portfolio-link">
+    <div class="portfolio-link">
       <a href="#Projets">
         {#if window.scrollY <= 100}
           <button
@@ -94,34 +94,33 @@
   #Accueil {
     margin-bottom: 4rem;
   }
-  #home {
+  .home {
     background-color: #82c2db;
     padding-top: 4rem;
     color: #333333;
   }
-  #catching {
+  .catching {
     margin: 2.5rem 1rem;
   }
   h1 {
     font-size: 1.7rem;
     font-weight: 500;
-    text-transform: uppercase;
   }
-  #catchphrase {
+  .catchphrase {
     margin-top: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   h1,
-  p#catchphrase {
+  p.catchphrase {
     transition: color 1s ease;
   }
-  #home__picture {
+  .home__picture {
     background-color: white;
   }
   .home__image {
     margin-bottom: -0.7rem;
   }
-  #portfolio-link {
+  .portfolio-link {
     margin-top: 4rem;
     text-align: center;
   }
@@ -151,6 +150,60 @@
     to {
       opacity: 1;
       color: #333333;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .catching {
+      margin: 2rem 2rem;
+    }
+    .catchphrase {
+      margin-top: 1rem;
+    }
+    .portfolio-link {
+      margin-top: 2rem;
+    }
+  }
+
+  @media (min-width: 400px) {
+    .catching {
+      margin: 3rem 1rem;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .catching {
+      width: 94%;
+      margin: 4rem auto;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .catching {
+      margin: 6rem auto;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    p.catchphrase {
+      margin-left: 0.1rem;
+    }
+
+    .catching {
+      margin: 3rem auto 2.5rem auto;
+    }
+
+    .portfolio-link {
+      width: 94%;
+      margin: 1rem auto 0 auto;
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 1350px) {
+    .catching,
+    .portfolio-link {
+      width: 78rem;
     }
   }
 </style>
