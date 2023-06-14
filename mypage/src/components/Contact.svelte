@@ -65,9 +65,9 @@
 </script>
 
 <section id="Contact">
+  <h2>Contact</h2>
+  <hr class="separator" />
   <div class="contact-container">
-    <h2>Contact</h2>
-    <hr class="separator" />
     <p>
       N'hésitez pas à me contacter en remplissant le formulaire, je vous
       répondrais dès que possible.
@@ -181,8 +181,9 @@
   }
 
   @media (min-width: 1080px) {
-    .contact-container {
+    .form-container {
       width: 50rem;
+      margin: auto;
     }
 
     section {
