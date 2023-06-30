@@ -14,17 +14,17 @@
       <div class="project-card-txt">
         <h3>O'Sport</h3>
         <p>
-          <strong>En cours.</strong> Projet de fin de formation O'Clock. Vise à mettre
+          Projet de fin de formation O'Clock. Vise à mettre
           en relation des particuliers autour d'un projet sportif.
         </p>
         <p class="project-technos">
           Next.js, Tailwind, Express, Sequelize, PostgreSQL
         </p>
         <div class="project-btn">
-          <a href="https://dev2.keronn.net/">
+          <a href="https://osport.ronankerveno.dev/">
             <button>Site web</button>
           </a>
-          <a href="https://github.com/O-clock-Quarks/O-Sport-Front">
+          <a href="https://github.com/RonanKerveno/O-Sport-Frontend">
             <button>GitHub</button>
           </a>
         </div>
@@ -40,7 +40,7 @@
         />
       </div>
       <div class="project-card-txt">
-        <h3>Mon blog</h3>
+        <h3>RK Blog</h3>
         <p>
           Mon carnet de notes partageant mon apprentissage du développement et
           des astuces autour de Linux.
@@ -133,6 +133,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
   }
   button:hover {
     background-color: #68a5c4;
