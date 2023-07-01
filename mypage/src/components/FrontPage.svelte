@@ -24,7 +24,7 @@
   });
 
   let title = "Bonjour, je suis Ronan Kerveno".split("");
-  let subtitle = "Développeur Web Javascript Frontend".split("");
+  let subtitle = "Développeur Web Javascript Full Stack".split("");
 </script>
 
 <div id="Accueil" style="height: {pageHeight};">
