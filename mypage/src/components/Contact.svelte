@@ -7,6 +7,7 @@
   let status = "";
   let isSubmitting = false;
 
+  const subject = "Message depuis ronankerveno.dev";
   let name = "";
   let email = "";
   let message = "";
@@ -26,6 +27,7 @@
 
     const object = {
       access_key: mailApiKey,
+      subject: subject,
       name: name,
       email: email,
       message: message,
