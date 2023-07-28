@@ -5,8 +5,7 @@
 	import Projects from "../components/Projects.svelte";
 	import Contact from "../components/Contact.svelte";
 	import Footer from "../components/Footer.svelte";
-	/** @type {import('../routes/$types').PageData} */
-	export let data;
+	import { PUBLIC_EMAIL_API_KEY } from '$env/static/public';
 </script>
 
 <Header />
@@ -15,7 +14,7 @@
 	<FrontPage />
 	<AboutMe />
 	<Projects />
-	<Contact mailApiKey={data.mailApiKey}/>
+	<Contact mailApiKey={PUBLIC_EMAIL_API_KEY}/>
 </main>
 
 <Footer />
