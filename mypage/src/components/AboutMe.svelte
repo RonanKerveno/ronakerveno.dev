@@ -5,6 +5,7 @@
     "JavaScript",
     "React",
     "Next.js",
+    "TypeScript",
     "Svelte",
     "Tailwind",
     "Sass",
@@ -14,7 +15,6 @@
     "Sequelize",
     "Directus",
     "GIT",
-    "Terminal",
     "Linux",
   ];
 </script>
